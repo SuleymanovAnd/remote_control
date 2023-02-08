@@ -20,7 +20,7 @@ set(SOURCE
         remoteCtrl.ui
         )
 set(INCLUDE
-        ${MY_DIRECTORY}/
+        ${MY_DIRECTORY}/RemoteCtrlMainWindow.h
         )
 add_executable(remote_control ${SOURCE} ${INCLUDE} )
 target_include_directories(remote_control PUBLIC ${MY_DIRECTORY})

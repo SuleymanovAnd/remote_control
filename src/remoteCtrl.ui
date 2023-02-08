@@ -33,7 +33,7 @@
      <item>
       <layout class="QGridLayout" name="gridLayout">
        <item row="0" column="0">
-        <widget class="QPushButton" name="pushButton_2">
+        <widget class="QPushButton" name="num_1">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -57,7 +57,7 @@
         </widget>
        </item>
        <item row="0" column="2">
-        <widget class="QPushButton" name="pushButton">
+        <widget class="QPushButton" name="num_3">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -81,7 +81,7 @@
         </widget>
        </item>
        <item row="1" column="2">
-        <widget class="QPushButton" name="pushButton_9">
+        <widget class="QPushButton" name="num_6">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -105,7 +105,7 @@
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QPushButton" name="pushButton_3">
+        <widget class="QPushButton" name="num_2">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -129,7 +129,7 @@
         </widget>
        </item>
        <item row="3" column="1">
-        <widget class="QPushButton" name="pushButton_15">
+        <widget class="QPushButton" name="num_0">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
            <horstretch>0</horstretch>
@@ -153,7 +153,7 @@
         </widget>
        </item>
        <item row="2" column="0">
-        <widget class="QPushButton" name="pushButton_4">
+        <widget class="QPushButton" name="num_7">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -177,7 +177,7 @@
         </widget>
        </item>
        <item row="1" column="0">
-        <widget class="QPushButton" name="pushButton_7">
+        <widget class="QPushButton" name="num_4">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -201,7 +201,7 @@
         </widget>
        </item>
        <item row="2" column="2">
-        <widget class="QPushButton" name="pushButton_6">
+        <widget class="QPushButton" name="num_9">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -245,12 +245,12 @@
           </size>
          </property>
          <property name="title">
-          <string>Voliume</string>
+          <string>Volume</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
          </property>
-         <widget class="QPushButton" name="pushButton_12">
+         <widget class="QPushButton" name="vlmDwn">
           <property name="geometry">
            <rect>
             <x>10</x>
@@ -269,7 +269,7 @@
            <string>﹀</string>
           </property>
          </widget>
-         <widget class="QPushButton" name="pushButton_11">
+         <widget class="QPushButton" name="vlmUp">
           <property name="geometry">
            <rect>
             <x>10</x>
@@ -291,7 +291,7 @@
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QPushButton" name="pushButton_8">
+        <widget class="QPushButton" name="num_5">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -315,7 +315,7 @@
         </widget>
        </item>
        <item row="2" column="1">
-        <widget class="QPushButton" name="pushButton_5">
+        <widget class="QPushButton" name="num_8">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -361,7 +361,7 @@
          <property name="title">
           <string>Chanel</string>
          </property>
-         <widget class="QPushButton" name="pushButton_13">
+         <widget class="QPushButton" name="chUp">
           <property name="geometry">
            <rect>
             <x>10</x>
@@ -386,7 +386,7 @@
            <string> ︿ </string>
           </property>
          </widget>
-         <widget class="QPushButton" name="pushButton_14">
+         <widget class="QPushButton" name="chDwn">
           <property name="geometry">
            <rect>
             <x>10</x>
@@ -435,8 +435,233 @@
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>num_1</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>pushBtn()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>50</x>
+     <y>101</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>45</x>
+     <y>42</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>num_2</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>pushBtn()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>128</x>
+     <y>96</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>120</x>
+     <y>46</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>num_3</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>pushBtn()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>194</x>
+     <y>92</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>193</x>
+     <y>44</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>num_4</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>pushBtn()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>39</x>
+     <y>202</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>40</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>num_5</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>pushBtn()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>118</x>
+     <y>207</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>121</x>
+     <y>146</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>num_6</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>pushBtn()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>195</x>
+     <y>202</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>194</x>
+     <y>147</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>num_7</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>pushBtn()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>40</x>
+     <y>305</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>41</x>
+     <y>251</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>num_8</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>pushBtn()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>120</x>
+     <y>305</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>121</x>
+     <y>247</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>num_9</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>pushBtn()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>197</x>
+     <y>304</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>256</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chUp</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>pushBtn()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>50</x>
+     <y>423</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>54</x>
+     <y>360</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chDwn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>pushBtn()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>31</x>
+     <y>451</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>39</x>
+     <y>503</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>num_0</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>pushBtn()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>123</x>
+     <y>418</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>129</x>
+     <y>366</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>vlmUp</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>pushBtn()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>201</x>
+     <y>419</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>204</x>
+     <y>361</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>vlmDwn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>pushBtn()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>186</x>
+     <y>453</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>182</x>
+     <y>509</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
  <slots>
-  <slot>push()</slot>
+  <slot>pushBtn()</slot>
  </slots>
 </ui>
