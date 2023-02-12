@@ -7,17 +7,17 @@
 #include <QMainWindow>
 #include <QPushButton>
 #include <QLCDNumber>
-
+#include <string>
 
 class RemoteCtrlWindow : public QMainWindow {
     Q_OBJECT
+    QString ch = "1 ch";
+    QString vlm = "100 ";
 public:
     RemoteCtrlWindow (QWidget* parent = nullptr) : QMainWindow (parent){}
     QLCDNumber *lcdNumber;
 public slots:
     void pushBtn(){
-        QString ch = "0 ch";
-        QString vlm = "100 ";
         bool ok;
         QPushButton *btn = dynamic_cast<QPushButton*>(sender());
         int temp = btn->text().toInt(&ok,10);
@@ -33,10 +33,28 @@ public slots:
                 else if(temp == 9) ch = "9 ch";
                 else if(temp == 0) ch = "0 ch";
             } else {
-                if(btn->text().toStdString() == "ChUp"){int chanel = ch.toInt(); if(chanel !=9) ch.front() = (chanel + 1);}
-                else if(btn->text().toStdString() == "ChDwn"){int chanel = ch.toInt(); if(chanel !=0) ch.front() = (chanel - 1);}
-                else if (btn->text().toStdString() == "VlmUp"){int volume  = vlm.toInt(); if(volume !=100) vlm = (volume + 10) + " ";}
-                else if (btn->text().toStdString() == "VlmDwn"){int volume  = vlm.toInt(); if(volume !=0) vlm = (volume - 10) + " ";}
+                if(btn->text().toStdString() == "︿"){
+                    std::string chTmp = ch.toStdString();
+                    int chanel = stoi(chTmp);
+                    if(chanel !=9) {chanel += 1;
+                        std::string temp;
+                        temp += std::to_string(chanel) + " ch";
+                        ch.clear();
+                        ch.append(temp.c_str());}
+
+                }
+                else if(btn->text().toStdString() == "﹀"){
+                    std::string chTmp = ch.toStdString();
+                    int chanel = stoi(chTmp);
+                    if(chanel !=0) {chanel -= 1;
+                        std::string temp;
+                        temp += std::to_string(chanel) + " ch";
+                        ch.clear();
+                        ch.append(temp.c_str());}
+
+                }
+                else if (btn->text().toStdString() == " ︿ "){int volume  = vlm.toInt(); if(volume !=100) vlm = (volume + 10) + " ";}
+                else if (btn->text().toStdString() == " ﹀ "){int volume  = vlm.toInt(); if(volume !=0) vlm = (volume - 10) + " ";}
             }
              QString lcd = vlm + ch;
             lcdNumber->display(lcd);
