@@ -6,17 +6,21 @@
 #define REMOTE_CONTROL_REMOTECTRLMAINWINDOW_H
 #include <QMainWindow>
 #include <QPushButton>
-#include <QLCDNumber>
+#include <QLineEdit>
 #include <string>
 
 class RemoteCtrlWindow : public QMainWindow {
     Q_OBJECT
     QString ch = "1 ch";
-    QString vlm = "100 ";
+    QString vlm = "100 lvl ";
 public:
-    RemoteCtrlWindow (QWidget* parent = nullptr) : QMainWindow (parent){}
-    QLCDNumber *lcdNumber;
+    QLineEdit *output;
+
+    RemoteCtrlWindow (QWidget* parent = nullptr) : QMainWindow (parent){
+    }
+
 public slots:
+
     void pushBtn(){
         bool ok;
         QPushButton *btn = dynamic_cast<QPushButton*>(sender());
@@ -36,28 +40,45 @@ public slots:
                 if(btn->text().toStdString() == "︿"){
                     std::string chTmp = ch.toStdString();
                     int chanel = stoi(chTmp);
-                    if(chanel !=9) {chanel += 1;
+                    if(chanel !=99) {chanel += 1;}
+                    else if(chanel == 99) {chanel = 0;}
                         std::string temp;
                         temp += std::to_string(chanel) + " ch";
                         ch.clear();
-                        ch.append(temp.c_str());}
-
+                        ch.append(temp.c_str());
                 }
                 else if(btn->text().toStdString() == "﹀"){
                     std::string chTmp = ch.toStdString();
                     int chanel = stoi(chTmp);
-                    if(chanel !=0) {chanel -= 1;
+                    if(chanel !=0) {chanel -= 1;}
+                    else if (chanel == 0){chanel = 99;}
                         std::string temp;
                         temp += std::to_string(chanel) + " ch";
                         ch.clear();
-                        ch.append(temp.c_str());}
-
+                        ch.append(temp.c_str());
                 }
-                else if (btn->text().toStdString() == " ︿ "){int volume  = vlm.toInt(); if(volume !=100) vlm = (volume + 10) + " ";}
-                else if (btn->text().toStdString() == " ﹀ "){int volume  = vlm.toInt(); if(volume !=0) vlm = (volume - 10) + " ";}
+                else if (btn->text().toStdString() == " ︿ "){
+                    std::string vlmTmp = vlm.toStdString();
+                    int volume = stoi(vlmTmp);
+                    if(volume !=100) {volume += 10;
+                        std::string temp;
+                        temp += std::to_string(volume) + " lvl ";
+                        vlm.clear();
+                        vlm.append(temp.c_str());}
+                }
+                else if (btn->text().toStdString() == " ﹀ "){
+                    std::string vlmTmp = vlm.toStdString();
+                    int volume = stoi(vlmTmp);
+                    if(volume !=0) {volume -= 10;
+                        std::string temp;
+                        temp += std::to_string(volume) + " lvl ";
+                        vlm.clear();
+                        vlm.append(temp.c_str());}
+                }
             }
-             QString lcd = vlm + ch;
-            lcdNumber->display(lcd);
+        QString txt = vlm;
+        txt += ch;
+        output->setText(txt);
 
     };
 };

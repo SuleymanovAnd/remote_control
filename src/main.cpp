@@ -9,7 +9,7 @@ int main(int argc, char *argv[]) {
     RemoteCtrlWindow window(nullptr);
     Ui_MainWindow remoteCtrl;
     remoteCtrl.setupUi(&window);
-    window.lcdNumber = remoteCtrl.lcdNumber;
+    window.output = remoteCtrl.output;
     window.show();
     return QApplication::exec();
 }
